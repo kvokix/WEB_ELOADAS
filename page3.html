@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Oldal 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="page2.html">Oldal 2</a>
+        <a href="page3.html" class="active">Oldal 3</a>
+    </nav>
+    
+    <div class="container">
+        <aside>
+            <p>Oldalsáv tartalom</p>
+        </aside>
+        <div class="content">
+            <h2>HTML5 technológiák példák</h2>
+
+            <div class="tabs">
+                <button onclick="showTab('storage')">Web Storage</button>
+                <button onclick="showTab('worker')">Web Worker</button>
+                <button onclick="showTab('sse')">SSE</button>
+                <button onclick="showTab('geo')">Geolocation</button>
+                <button onclick="showTab('drag')">Drag & Drop</button>
+                <button onclick="showTab('canvas')">Canvas</button>
+                <button onclick="showTab('svg')">SVG</button>
+            </div>
+
+            <div id="storage" class="tab-content">
+                <h3>Web Storage</h3>
+                <input type="text" id="storeInput" placeholder="Írj be valamit">
+                <button onclick="localStorage.setItem('adat', document.getElementById('storeInput').value)">Mentés</button>
+                <button onclick="alert(localStorage.getItem('adat'))">Betöltés</button>
+            </div>
+
+            <div id="worker" class="tab-content">
+                <h3>Web Worker</h3>
+                <button onclick="startWorker()">Worker indítása</button>
+                <p id="workerResult"></p>
+            </div>
+
+            <div id="sse" class="tab-content">
+                <h3>Server-Sent Events (SSE)</h3>
+                <p><i>(Ezt szerver támogatás kellene, itt csak jelzésként szerepel.)</i></p>
+            </div>
+
+            <div id="geo" class="tab-content">
+                <h3>Geolocation</h3>
+                <button onclick="getLocation()">Hely meghatározása</button>
+                <p id="geoResult"></p>
+            </div>
+
+            <div id="drag" class="tab-content">
+                <h3>Drag & Drop</h3>
+                <div draggable="true" ondragstart="drag(event)" style="background:lightblue; width:100px;">Húzható elem</div>
+                <div id="dropTarget" ondrop="drop(event)" ondragover="allowDrop(event)">Dobd ide</div>
+            </div>
+
+            <div id="canvas" class="tab-content">
+                <h3>Canvas</h3>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+            </div>
+
+            <div id="svg" class="tab-content">
+                <h3>SVG</h3>
+                <svg width="200" height="100">
+                    <rect width="200" height="100" style="fill:lime;stroke:black;stroke-width:3;" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Készítette: Szabó Martin || J5RL7M és Burka Gergely Ervin || EP9NEQ
+    </footer>
+
+    <script src="HTML5.js"></script>
+</body>
+</html>
