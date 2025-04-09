@@ -2,4 +2,4 @@
 
 Készítők:  
 Szabó Martin || J5RL7M || kvokix      
-Burka Gergő || EP9NEQ || Madesz
+Burka Gergely Ervin || EP9NEQ || Madesz
