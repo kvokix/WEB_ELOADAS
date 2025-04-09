@@ -1,5 +1,5 @@
 # WEB_ELOADAS
 
 Készítők:  
-Szabó Martin  
-Burka Gergő
+Szabó Martin || J5RL7M || kvokix
+Burka Gergő || EP9NEQ || Madesz
