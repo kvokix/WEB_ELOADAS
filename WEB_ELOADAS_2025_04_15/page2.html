@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Oldal 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="page2.html" class="active">Oldal 2</a>
+        <a href="page3.html">Oldal 3</a>
+        <a href="page4.html">Oldal 4</a>
+        <a href="ajax.html">Ajax</a>
+        <a href="page6.html">Oldal 6</a>
+    </nav>
+
+    <div class="container">
+        <aside>
+            <p>Oldalsáv tartalom</p>
+        </aside>
+        <div class="content">
+            <h2>CRUD táblázat</h2>
+
+            <input type="text" id="searchInput" class="search-input" placeholder="Keresés...">
+
+            <div class="form-row">
+                <input type="text" id="name" placeholder="Név" required minlength="2" maxlength="20">
+                <input type="number" id="age" placeholder="Kor" required min="1" max="120">
+                <input type="text" id="city" placeholder="Város" required minlength="2" maxlength="20">
+                <input type="text" id="email" placeholder="Email" required>
+                <button onclick="addRow()">Hozzáadás</button>
+            </div>
+
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th class="sortable" onclick="sortTable(0)">Név</th>
+                        <th class="sortable" onclick="sortTable(1)">Kor</th>
+                        <th class="sortable" onclick="sortTable(2)">Város</th>
+                        <th class="sortable" onclick="sortTable(3)">Email</th>
+                        <th>Művelet</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        Készítette: Szabó Martin || J5RL7M és Burka Gergely Ervin || EP9NEQ
+    </footer>
+
+    
+</body>
+</html>

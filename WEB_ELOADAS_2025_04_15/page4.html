@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Táblázat és Vonaldiagram</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    tr:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="page2.html">Oldal 2</a>
+        <a href="page3.html">Oldal 3</a>
+        <a href="page4.html" class="active">Oldal 4</a>
+        <a href="ajax.html">Ajax</a>
+        <a href="page6.html">Oldal 6</a>
+    </nav>
+<h2>5x5-ös Táblázat</h2>
+<table id="dataTable">
+  <tbody>
+    <tr><td>12</td><td>19</td><td>3</td><td>5</td><td>2</td></tr>
+    <tr><td>9</td><td>14</td><td>6</td><td>8</td><td>3</td></tr>
+    <tr><td>7</td><td>11</td><td>4</td><td>6</td><td>5</td></tr>
+    <tr><td>10</td><td>13</td><td>2</td><td>9</td><td>1</td></tr>
+    <tr><td>8</td><td>15</td><td>5</td><td>7</td><td>4</td></tr>
+  </tbody>
+</table>
+
+<canvas id="lineChart" width="600" height="300"></canvas>
+
+<script>
+  const ctx = document.getElementById('lineChart').getContext('2d');
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['1', '2', '3', '4', '5'],
+      datasets: [{
+        label: 'Kiválasztott sor adatai',
+        data: [],
+        borderColor: 'blue',
+        backgroundColor: 'lightblue',
+        fill: false,
+        tension: 0.1
+      }]
+    },
+    options: {
+      responsive: false,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  const table = document.getElementById('dataTable');
+  table.addEventListener('click', function(event) {
+    const row = event.target.closest('tr');
+    if (!row) return;
+
+    const values = Array.from(row.children).map(cell => parseFloat(cell.textContent));
+    chart.data.datasets[0].data = values;
+    chart.update();
+  });
+</script>
+
+</body>
+</html>
