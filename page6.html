@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS: Form Validálás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="page2.html">Oldal 2</a>
+        <a href="page3.html">Oldal 3</a>
+        <a href="page4.html">Oldal 4</a>
+        <a href="ajax.html">Ajax</a>
+        <a href="page6.html" class="active">Oldal 6</a>
+    </nav>
+    
+<h2>Űrlap Validálás</h2>
+<form id="myForm">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="phone">Telefonszám:</label>
+        <input type="text" id="phone" name="phone">
+    </div>
+    <div class="form-group">
+        <label for="password">Jelszó:</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <button type="submit">Küldés</button>
+</form>
+
+<div id="feedback"></div>
+
+<script src="oojs.js"></script>
+</body>
+</html>
