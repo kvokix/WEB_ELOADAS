@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <a href="../index.html">Főoldal</a>
+    <a href="CRUD.html">CRUD</a>
+    <a href="HTML5.html">HTML5</a>
+    <a href="ChartJS.html">ChartJS</a>
+    <a href="Ajax.html" class="active">Ajax</a>
+    <a href="OOJS.html">OOJS</a>
+  </nav>
+
+  <div class="container">
+    <aside>
+      <p>Oldalsáv tartalom</p>
+    </aside>
+
+    <div class="content">
+      <h2>API CRUD műveletek</h2>
+
+      <label>ID (csak módosításhoz/törléshez):</label>
+      <input type="text" id="idInput" placeholder="Pl.: 12">
+
+      <label>Név:</label>
+      <input type="text" id="nameInput" placeholder="Név">
+
+      <label>Magasság:</label>
+      <input type="text" id="heightInput" placeholder="Pl.: 180">
+
+      <label>Súly:</label>
+      <input type="text" id="colorInput" placeholder="Pl.: 70">
+
+      <button onclick="readData()">Adatok lekérdezése</button>
+      <button onclick="createData()">Új adat hozzáadása</button>
+      <button onclick="getDataForId()">Adatok betöltése módosításhoz</button>
+      <button onclick="updateData()">Adat módosítása</button>
+
+      <br>
+
+      <label>ID törléshez:</label>
+      <input type="text" id="deleteIdInput" placeholder="Pl.: 12">
+      <button onclick="deleteData()">Adat törlése</button>
+
+      <div id="feedback" class="feedback"></div>
+      <hr>
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <script src="../JS/Ajax.js"></script>
+
+  <footer>
+    Készítette: <br> Szabó Martin || J5RL7M <br> Burka Gergely Ervin || EP9NEQ
+  </footer>
+</body>
+
+</html>
